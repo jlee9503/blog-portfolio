@@ -22,8 +22,8 @@ const NavBar = () => {
     <nav className="fixed top-0 lg:left-0 h-fit p-6 lg:p-0 lg:h-full w-full lg:w-80 primary-bg z-50">
       <div className="flex lg:flex-col justify-between items-center lg:justify-center lg:h-full">
         {/* Logo */}
-        <h1 className="text-3xl font-bold lg:mb-6 secondary uppercase">
-          Jung Lee
+        <h1 className="text-3xl lg:text-4xl font-bold lg:mb-6 secondary uppercase">
+          Jung
         </h1>
 
         {/* Navigation Links - Web */}

@@ -4,7 +4,7 @@ import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <div>
+    <div id="main">
       <div className="relative h-screen w-full bg-[url('/images/analytics-3.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="layout text-white gap-10">

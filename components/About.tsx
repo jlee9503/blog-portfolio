@@ -29,7 +29,7 @@ const skillIcons = [
 
 const About = () => {
   return (
-    <div className="layout py-16 lg:py-32">
+    <div id='about' className="layout py-16 lg:py-32">
       <div className="w-full flex flex-col lg:flex-row justify-center items-center lg:px-16">
         <div className="relative w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] lg:flex-1/3">
           <Image

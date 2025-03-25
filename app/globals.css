@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* colors */
   --steel-blue: #3b99d9;
   --steel-blue-2: #2e80b6;
   --dark-khaki: #a8d069;
@@ -31,6 +32,8 @@
   --white-smoke-2: #f0f0f0;
   --white-smoke-3: #edeff2;
   --radius: 0.625rem;
+
+  /* shadcn */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -163,5 +166,9 @@ body {
 
   .secondary-bg {
     @apply bg-[var(--indian-red)]
+  }
+
+  .project-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:min-h-[648px] xl:min-h-[532px]
   }
 }
