@@ -169,6 +169,6 @@ body {
   }
 
   .project-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:min-h-[648px] xl:min-h-[532px]
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8
   }
 }

@@ -23,7 +23,7 @@ const skillIcons = [
     name: "Web Development",
     url: "/web-development.svg",
     summary:
-      "Developing responsive and dynamic web applications using JavaScript (Vue.js, React), HTML/CSS, and backend technologies (C# .NET) to create seamless digital experiences.",
+      "Developing responsive and dynamic web applications using JavaScript (Vue.js, React), HTML/CSS, and backend technologies (Next.js, C# .NET) to create seamless digital experiences.",
   },
 ];
 

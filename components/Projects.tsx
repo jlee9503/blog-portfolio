@@ -1,10 +1,11 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectGrid from "./ProjectGrid";
+import { projectData } from "@/data/projectData";
 
 const Projects = () => {
   return (
-    <div id="projects" className="layout py-16 lg:py-32">
-      <div className="flex flex-col justify-center items-center">
+    <div id="projects" className="layout py-16 lg:py-32 xl:min-h-[924px]">
+      <div className="flex flex-col justify-center items-center xl:min-h-[668px]">
         <div className="text-3xl lg:text-4xl font-bold mb-2">Portfolio</div>
         <div>
           <Tabs
@@ -24,78 +25,46 @@ const Projects = () => {
             </TabsList>
             <TabsContent value="all">
               <div className="project-grid">
-                <ProjectGrid
-                  name="Medical Admission Analytics"
-                  imgUrl="/images/medical-dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Telecommunication Customer Churn Analysis"
-                  imgUrl="/images/churn.jpg"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
+                {projectData.analytics.map((project) => (
+                  <ProjectGrid
+                    key={project.slug}
+                    name={project.name}
+                    slug={project.slug}
+                    imgUrl={project.imgUrl}
+                  />
+                ))}
+                {projectData.web.slice(0,2).map((project) => (
+                  <ProjectGrid
+                    key={project.slug}
+                    name={project.name}
+                    slug={project.slug}
+                    imgUrl={project.imgUrl}
+                  />
+                ))}
               </div>
             </TabsContent>
             <TabsContent value="analytics">
               <div className="project-grid">
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
+                {projectData.analytics.map((project) => (
+                  <ProjectGrid
+                    key={project.slug}
+                    name={project.name}
+                    slug={project.slug}
+                    imgUrl={project.imgUrl}
+                  />
+                ))}
               </div>
             </TabsContent>
             <TabsContent value="web">
               <div className="project-grid">
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
-                <ProjectGrid
-                  name="Fitness Tracker Dashboard"
-                  imgUrl="/images/fitness_tracker_dashboard.png"
-                />
+                {projectData.web.map((project) => (
+                  <ProjectGrid
+                    key={project.slug}
+                    name={project.name}
+                    slug={project.slug}
+                    imgUrl={project.imgUrl}
+                  />
+                ))}
               </div>
             </TabsContent>
           </Tabs>
