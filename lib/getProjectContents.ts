@@ -2,7 +2,7 @@ import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 
-const contentDir = path.join(process.cwd(), "/data/content");
+const contentDir = path.join(process.cwd(), "data/content");
 
 export async function getProjectContents() {
   const files = fs.readdirSync(contentDir);
@@ -28,5 +28,5 @@ export function getProjectContent(slug: string) {
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(fileContent);
 
-  return { ...data, content };
+  return { data, content };
 }

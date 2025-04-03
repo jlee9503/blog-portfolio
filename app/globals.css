@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -70,6 +71,10 @@
 
 body {
   font-family: var(--font-oswald);
+}
+
+article {
+  font-family: var(--font-inter);
 }
 
 .dark {
@@ -155,20 +160,20 @@ body {
 
 @layer components {
   .layout {
-    @apply relative z-10 flex flex-col justify-center items-center h-full lg:w-[calc(100%-300px-15px)] lg:right-[calc(-315px)]
+    @apply relative z-10 flex flex-col justify-center items-center h-full lg:w-[calc(100%-300px-15px)] lg:right-[calc(-315px)];
   }
   .primary-bg {
-    @apply bg-[var(--dark-slate-gray)]
+    @apply bg-[var(--dark-slate-gray)];
   }
   .secondary {
-    @apply text-[var(--indian-red)]
+    @apply text-[var(--indian-red)];
   }
 
   .secondary-bg {
-    @apply bg-[var(--indian-red)]
+    @apply bg-[var(--indian-red)];
   }
 
   .project-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8;
   }
 }

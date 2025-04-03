@@ -26,44 +26,24 @@ const Projects = () => {
             <TabsContent value="all">
               <div className="project-grid">
                 {projectData.analytics.map((project) => (
-                  <ProjectGrid
-                    key={project.slug}
-                    name={project.name}
-                    slug={project.slug}
-                    imgUrl={project.imgUrl}
-                  />
+                  <ProjectGrid key={project.slug} {...project} />
                 ))}
-                {projectData.web.slice(0,2).map((project) => (
-                  <ProjectGrid
-                    key={project.slug}
-                    name={project.name}
-                    slug={project.slug}
-                    imgUrl={project.imgUrl}
-                  />
+                {projectData.web.slice(0, 2).map((project) => (
+                  <ProjectGrid key={project.slug} {...project} />
                 ))}
               </div>
             </TabsContent>
             <TabsContent value="analytics">
               <div className="project-grid">
                 {projectData.analytics.map((project) => (
-                  <ProjectGrid
-                    key={project.slug}
-                    name={project.name}
-                    slug={project.slug}
-                    imgUrl={project.imgUrl}
-                  />
+                  <ProjectGrid key={project.slug} {...project} />
                 ))}
               </div>
             </TabsContent>
             <TabsContent value="web">
               <div className="project-grid">
                 {projectData.web.map((project) => (
-                  <ProjectGrid
-                    key={project.slug}
-                    name={project.name}
-                    slug={project.slug}
-                    imgUrl={project.imgUrl}
-                  />
+                  <ProjectGrid key={project.slug} {...project} />
                 ))}
               </div>
             </TabsContent>
