@@ -4,16 +4,11 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-  const projectContent = getProjectContent(slug);
+  const { slug } = await params;
+  const projectContent = await getProjectContent(slug);
 
   if (!projectContent) {
     return notFound();
-    // return (
-    //   <div className="layout">
-    //     <h1>Blog not found</h1>
-    //   </div>
-    // );
   }
 
   return (
@@ -53,12 +48,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 {children}
               </a>
             ),
-            // img: ({ ...props }) => (
-            //   <img
-            //     {...props}
-            //     className="max-w-[400px] max-h-[400px] xl:max-w-[600px] xl:max-h-[600px]"
-            //   />
-            // ),
           }}
         >
           {projectContent.content}

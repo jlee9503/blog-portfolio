@@ -1,32 +1,38 @@
 import matter from "gray-matter";
-import fs from "fs";
+import fs from "fs/promises"; // Use fs/promises for async functions
 import path from "path";
 
 const contentDir = path.join(process.cwd(), "data/content");
 
 export async function getProjectContents() {
-  const files = fs.readdirSync(contentDir);
+  const files = await fs.readdir(contentDir); // Read directory asynchronously
 
-  return files.map((filename) => {
-    const fileContent = fs.readFileSync(
-      path.join(contentDir, filename),
-      "utf-8"
-    );
-    const { data, content } = matter(fileContent);
+  return Promise.all(
+    files.map(async (filename) => {
+      const fileContent = await fs.readFile(
+        path.join(contentDir, filename),
+        "utf-8"
+      );
+      const { data, content } = matter(fileContent);
 
-    return {
-      ...data,
-      content,
-    };
-  });
+      return {
+        ...data,
+        content,
+      };
+    })
+  );
 }
 
-export function getProjectContent(slug: string) {
+export async function getProjectContent(slug: string) {
   const filePath = path.join(contentDir, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
 
-  const fileContent = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(fileContent);
+  try {
+    const fileContent = await fs.readFile(filePath, "utf-8");
+    const { data, content } = matter(fileContent);
 
-  return { data, content };
+    return { data, content };
+  } catch (error) {
+    console.error("Error reading file:", error);
+    return null;
+  }
 }
