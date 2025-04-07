@@ -3,7 +3,7 @@ import { getProjectContent } from "@/lib/getProjectContents";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const projectContent = await getProjectContent(slug);
 
