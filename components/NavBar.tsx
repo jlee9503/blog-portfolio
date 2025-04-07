@@ -77,7 +77,10 @@ const NavBar = () => {
                 <SheetTitle>
                   <ul>
                     {navMenu.map((item) => (
-                      <li key={item.menu}>
+                      <li
+                        key={item.menu}
+                        onClick={() => handleNavigation(item.url)}
+                      >
                         <Link href={item.url} className="hover:text-gray-300">
                           {item.menu}
                         </Link>

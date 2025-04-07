@@ -4,7 +4,7 @@ import { projectData } from "@/data/projectData";
 
 const Projects = () => {
   return (
-    <div id="projects" className="layout py-16 lg:py-32 xl:min-h-[924px]">
+    <div id="projects" className="layout py-24 lg:py-32 xl:min-h-[924px]">
       <div className="flex flex-col justify-center items-center xl:min-h-[668px]">
         <div className="text-3xl lg:text-4xl font-bold mb-2">Portfolio</div>
         <div>
