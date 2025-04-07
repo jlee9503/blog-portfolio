@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import {
   Sheet,
@@ -9,15 +11,32 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 
 const navMenu = [
-  { menu: "Home", url: "/" },
-  { menu: "About", url: "/about" },
-  { menu: "Projects", url: "/projects" },
-  { menu: "Contact", url: "/contact" },
+  { menu: "Home", url: "#main" },
+  { menu: "About", url: "#about" },
+  { menu: "Projects", url: "#projects" },
+  // { menu: "Contact", url: "#contact" },
 ];
 
 const NavBar = () => {
+  const router = useRouter();
+  const pathname = usePathname(); // Get the current route
+  const isOnHomePage = pathname === "/";
+
+  const handleNavigation = (url: string) => {
+    if (isOnHomePage) {
+      // Scroll to section if already on home page
+      document
+        .getElementById(url.replace("#", ""))
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to home page with hash if on a different page
+      router.push(`/${url}`);
+    }
+  };
+
   return (
     <nav className="fixed top-0 lg:left-0 h-fit p-6 lg:p-0 lg:h-full w-full lg:w-80 primary-bg z-50">
       <div className="flex lg:flex-col justify-between items-center lg:justify-center lg:h-full">
@@ -32,7 +51,11 @@ const NavBar = () => {
         <div className="hidden lg:flex lg:flex-col text-white">
           <ul className="space-y-4">
             {navMenu.map((item) => (
-              <li key={item.menu} className="text-center uppercase">
+              <li
+                key={item.menu}
+                className="text-center uppercase"
+                onClick={() => handleNavigation(item.url)}
+              >
                 <Link href={item.url} className="hover:text-gray-300">
                   {item.menu}
                 </Link>

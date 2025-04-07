@@ -9,11 +9,19 @@ interface projectInfo {
   name: string;
   slug: string;
   imgUrl: string;
-  blog: boolean;
+  section: string;
   url?: string;
+  repoUrl?: string;
 }
 
-const ProjectGrid = ({ name, slug, imgUrl, blog, url }: projectInfo) => {
+const ProjectGrid = ({
+  name,
+  slug,
+  imgUrl,
+  section,
+  url,
+  repoUrl,
+}: projectInfo) => {
   const [activeProject, setActiveProject] = useState<string | null>(null);
 
   return (
@@ -34,19 +42,36 @@ const ProjectGrid = ({ name, slug, imgUrl, blog, url }: projectInfo) => {
       >
         <h3 className="text-lg font-bold">{name}</h3>
         {/* <p className="text-sm">description</p> */}
-        {blog ? (
-          <Link href={`/projects/${slug}`}>
-            <Button className="cursor-pointer bg-[#cf404d] hover:bg-[#af4173] mt-4">
-              View Details
-            </Button>
-          </Link>
-        ) : (
-          url != undefined && (
+        {section === "analytics" ? (
+          url === undefined ? (
+            <Link href={`/projects/${slug}`}>
+              <Button className="cursor-pointer bg-[#cf404d] hover:bg-[#af4173] mt-4">
+                View Details
+              </Button>
+            </Link>
+          ) : (
             <Link href={url} target="_blank">
               <Button className="cursor-pointer bg-[#cf404d] hover:bg-[#af4173] mt-4">
                 View Project
               </Button>
             </Link>
+          )
+        ) : (
+          repoUrl != undefined && (
+            <div className="flex flex-col lg:flex-row gap-2">
+              <Link href={repoUrl} target="_blank">
+                <Button className="cursor-pointer bg-[#cf404d] hover:bg-[#af4173] mt-4">
+                  Github Repo
+                </Button>
+              </Link>
+              {url != undefined && (
+                <Link href={url} target="_blank">
+                  <Button className="cursor-pointer bg-[#cf404d] hover:bg-[#af4173] mt-4">
+                    View Demo
+                  </Button>
+                </Link>
+              )}
+            </div>
           )
         )}
       </div>

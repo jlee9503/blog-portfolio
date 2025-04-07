@@ -68,7 +68,7 @@ Customer churn significantly impacts revenue. Understanding key factors and iden
 
 
 ## 7. Key Findings
-### Regression Equation:
+#### Regression Equation:
 ```
 log(P(Churn=Yes) / P(Churn=No)) =
 -1.796 + 1.1956(Techie_Yes) + 1.6557(Multiple_Yes) + 0.7888(OnlineBackup_Yes) 
@@ -78,7 +78,7 @@ log(P(Churn=Yes) / P(Churn=No)) =
 + 0.4883(PaymentMethod_Electronic Check) - 0.11(Tenure)
 ```
 
-### Interpretation of coefficients:
+#### Interpretation of coefficients:
   - **Constant** = -1.796
     - Odds ratio: e^(-1.796) ≈ 0.17
     - The baseline odds of churn is approximately 0.17 when all predictors are constant.
@@ -136,11 +136,11 @@ log(P(Churn=Yes) / P(Churn=No)) =
     - For each additional month, **the odds of churn decrease by about 10%**.
 
 ## 8. Limitations & Recommendations
-### Limitations:
+#### Limitations:
 - Logistic regression assumes a linear relationship between predictors and the log-odds of churn, which may not capture complex patterns.
 - The pseudo R-squared value (0.6126) suggests room for model improvement.
 
-### Recommendations:
+#### Recommendations:
 - Implement customer retention strategies based on significant predictors.
 - Explore advanced machine learning models such as decision trees or Support Vector Machine (SVM).
 - Consider additional evaluation metrics beyond pseudo-R-squared.

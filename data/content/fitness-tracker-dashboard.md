@@ -2,7 +2,7 @@
 title: "Fitness Tracker Data Analysis"
 date: "February 26, 2025"
 slug: "fitness-tracker-dashboard"
-imgUrl: "/images/fitness_tracker_dashboard.png"
+imgUrl: "/images/fitness.jpg"
 tags: [MS Excel, Condition Formatting, Aggregate Functions, Pivot Table, Data Dashboard]
 ---
 

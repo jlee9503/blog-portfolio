@@ -3,11 +3,7 @@ import { getProjectContent } from "@/lib/getProjectContents";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
-export default async function Page({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const projectContent = getProjectContent(slug);
 
@@ -33,7 +29,14 @@ export default async function Page({
         ))}
         <h1 className="text-3xl font-bold">{projectContent.data.title}</h1>
         <p className="text-gray-500 text-sm">{projectContent.data.date}</p>
-        <Image src={projectContent.data.imgUrl} alt={projectContent.data.title} fill className="w-full max-h-[400px] object-cover -z-50 opacity-30" style={{ margin: 0 }} />
+
+        <Image
+          src={projectContent.data.imgUrl}
+          alt={projectContent.data.title}
+          fill
+          className="w-full max-h-[400px] object-cover -z-50 opacity-30"
+          style={{ margin: 0 }}
+        />
 
         <ReactMarkdown
           components={{
