@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+  const { slug } = params;
   const projectContent = getProjectContent(slug);
 
   if (!projectContent) {
