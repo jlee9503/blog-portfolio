@@ -1,14 +1,11 @@
 import { notFound } from "next/navigation";
-import { getProjectContent, getProjectContents } from "@/lib/getProjectContents";
+import { getProjectContent, getProjectSlugs } from "@/lib/getProjectContents";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-  const projects = await getProjectContents();
-
-  return projects.map((project) => ({
-    slug: project.content, // Ensure this matches your markdown file names
-  }));
+  const slugs = await getProjectSlugs(); // Get all available slugs
+  return slugs.map((slug) => ({ slug }));
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

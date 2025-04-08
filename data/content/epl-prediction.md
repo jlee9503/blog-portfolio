@@ -1,7 +1,7 @@
 ---
 title: "English Premier League (EPL) Prediction"
 date: "September 7, 2024"
-slug: "epl-data-prediction"
+slug: "epl-prediction"
 imgUrl: "/images/epl.jpg"
 tags: [BeautifulSoup, Pandas, Scikit-learn, Random Forest Classifier]
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Streaming Service Analysis"
 date: "November 13, 2024"
-slug: "streaming-services-analysis"
+slug: "streaming-services"
 imgUrl: "/images/streaming-services.jpg"
 tags: [R, ggplot2, Linear Regression]
 ---

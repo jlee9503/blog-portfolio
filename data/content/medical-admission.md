@@ -1,7 +1,7 @@
 ---
 title: "Medical Admission Analysis"
 date: "January 29, 2025"
-slug: "medical-admission-analytics"
+slug: "medical-admission"
 imgUrl: "/images/medical-admission.jpg"
 tags: [Pandas, Scikit-learn, Random Forest, Tableau Dashboard]
 ---

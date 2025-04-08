@@ -1,7 +1,7 @@
 ---
 title: "Telecommunication Customer Churn Analysis"
 date: "November 5, 2024"
-slug: "telecommunication-customer-churn-analysis"
+slug: "churn-analysis"
 imgUrl: "/images/churn.jpg"
 tags: [Pandas, NumPy, Scikit-learn, Statsmodels, Matplotlib, Seaborn]
 ---
@@ -65,7 +65,6 @@ Customer churn significantly impacts revenue. Understanding key factors and iden
     - The model correctly identifies about 80% of actual customers churned. However, approximately 20% of actual churners are missed (false negatives), meaning they churned but were not flagged.
   - F1 Score: **0.8133 ≃ 81%**
     - A score of 81.33% suggests that your model has a good trade-off between capturing true churn cases (recall) and minimizing false positives (precision).
-
 
 ## 7. Key Findings
 #### Regression Equation:

@@ -2,19 +2,19 @@ export const projectData = {
   analytics: [
     {
       name: "Medical Admission Analysis",
-      slug: "medical-admission-analysis",
+      slug: "medical-admission",
       imgUrl: "/images/medical-dashboard.png",
       section: "analytics",
     },
     {
       name: "Fitness Tracker Dashboard",
-      slug: "fitness-tracker-dashboard",
+      slug: "fitness-tracker",
       imgUrl: "/images/fitness_tracker_dashboard.png",
       section: "analytics",
     },
     {
       name: "Telecommunication Customer Churn Analysis",
-      slug: "telecommunication-customer-churn-analysis",
+      slug: "churn-analysis",
       imgUrl: "/images/churn.jpg",
       section: "analytics",
     },
@@ -27,13 +27,13 @@ export const projectData = {
     },
     {
       name: "EPL Data Prediction",
-      slug: "epl-data-prediction",
+      slug: "epl-prediction",
       imgUrl: "/images/epl.jpg",
       section: "analytics",
     },
     // {
     //   name: "Streaming Services Analysis",
-    //   slug: "streaming-services-analysis",
+    //   slug: "streaming-services",
     //   imgUrl: "/images/streaming-services.jpg",
     // },
   ],
