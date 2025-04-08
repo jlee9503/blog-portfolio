@@ -58,7 +58,7 @@ const ProjectGrid = ({
           )
         ) : (
           repoUrl != undefined && (
-            <div className="flex flex-col lg:flex-row gap-2">
+            <div className="flex flex-col lg:flex-row gap-0 lg:gap-2">
               <Link href={repoUrl} target="_blank">
                 <Button className="cursor-pointer bg-[#cf404d] hover:bg-[#af4173] mt-4">
                   Github Repo
