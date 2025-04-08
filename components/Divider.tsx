@@ -10,7 +10,7 @@ const Divider = () => {
           Explore my experience and skills
         </div>
         <Button className="bg-transparent cursor-pointer border-2 mt-4 lg:mt-0">
-          <Link href='/' target="_blank" download={true} className="flex gap-1 justify-center items-center font-semibold">
+          <Link href='/jungsu-lee_resume.docx' target="_blank" download={true} className="flex gap-1 justify-center items-center font-semibold">
             <Download />Download Resume
           </Link>
         </Button>
