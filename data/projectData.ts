@@ -1,6 +1,12 @@
 export const projectData = {
   analytics: [
     {
+      name: 'Data Warehouse',
+      slug: 'sales-data-warehouse',
+      imgUrl: '/images/data-warehouse.jpg',
+      section: 'analytics',
+    },
+    {
       name: "Medical Admission Analysis",
       slug: "medical-admission",
       imgUrl: "/images/medical-dashboard.png",

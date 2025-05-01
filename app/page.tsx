@@ -9,13 +9,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="layout text-white gap-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-white text-center px-10">
-            Data-driven decisions and seamless web experiences—that’s what I
-            create.
+            Turning Raw Data into Scalable Solutions and Strategic Insights
           </h1>
           <div className="px-10 text-center text-xl lg:text-2xl">
-            Welcome to my portfolio! Explore my projects in data analytics and
-            web development, where I turn data into insights and ideas into
-            functional web solutions.
+            Explore my work in data engineering and analytics — where I build
+            pipelines, transform data, and deliver decision-ready dashboards
+            using Python, SQL, and BI tools
           </div>
         </div>
       </div>
